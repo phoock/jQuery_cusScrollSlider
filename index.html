@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.css">
+    <link rel="stylesheet" href="./main.css">
+
+    <title>面向对象Jquery自定义滚动条</title>
+</head>
+
+<body>
+    <!-- 示例容器 -->
+    <div class="scroll-demo">
+        <!-- 标签切换区 -->
+        <ul class="scroll-tab clearfix">
+            <li class="tab-item tab-active">第一篇</li>
+            <li class="tab-item">第二篇</li>
+            <li class="tab-item">第三篇</li>
+            <li class="tab-item">第四篇</li>
+        </ul>
+        <!-- 滚动内容区 -->
+        <div class="scroll-wrap">
+            <!-- 滚动内容 -->
+            <div class="scroll-cont">
+
+                <h3 class="anchor">文章第一篇哦</h3>
+                <div class="scroll-ol">
+                    <p>　　原标题：[补壹刀]绝不可小视：这个国家正在摸着中国过河，但永远不会成为中国</p>
+                    <p>　　过去25年，哪个亚洲国家GDP的平均增速超过6.5%，哪个亚洲国家正在成为制造业强国，又是哪个亚洲国家被外媒誉为“下一只亚洲小龙”？也许有人以为答案是“中国”，要么就是“印度”。</p>
+                    <p>　　不好意思，叨姐要告诉你，是越南，那个我们恍惚觉得熟悉的南方邻国。</p>
+                    <p>　　越南对国人来说是曾经的小兄弟，是拥有同样意识形态的社会主义国家，是近代以来和中国发生过战争的国家，也是和中国存在南海争议的国家。至于越南的发展现状如何，大多数人估计也没多少兴趣了解，反正不管它怎么发展，都不太可能赶上中国。</p>
+                    <p>　　但是，越南越来越像是一个不可小觑的邻居。</p>
+                    <p>　　<strong>现实</strong></p>
+                    <p>　　如果我们瞪大眼睛好好观察，就不难发现，无论我们对越南持何种情感，有一种是绝对要不得的，那就是轻视。</p>
+                    <p>　　没去过越南的人，或许觉得该国经济不发达，老百姓也没什么钱，斗笠和摩托可能是家里最值钱的东西，就像我们的四大件。</p>
+                    <div class="img_wrapper"><img style="max-width: 500px;" src="http://n.sinaimg.cn/translate/20171115/fiyx-fynshev6247884.jpg" alt=""><span class="img_descr"></span></div>
+
+                </div>
+                <h3 class="anchor">文章第二篇哦</h3>
+                <div class="scroll-ol">
+                    <p>　　确实，上世纪80年代是越南经济的最低点，人均GDP不到100美元，是全球最穷的国家之一。这主要是因为打仗：前期主要是法国、日本、美国等帝国主义国家的罪恶，后面就是和我们闹翻，但责任不在我方。</p>
+                    <p>　　1986年，越南制定了革新开放的总政策，集中精力发展国内经济，强调越南民族的振兴。它建立国家管理市场经济体制，鼓励非国营经济发展，并努力构建平等竞争的市场环境；确认家庭联产承包制，削减土地税；积极扩大开放，大力吸引外资……</p>
+                    <p>　　是不是觉得有些眼熟，无论是改革思路还是发展模式，越南的发展路径与我国高度重合，俨然是中国改革开放的翻版。</p>
+                    <p>　　其实，按照越南的资源禀赋，不至于搞成“后进生”。因此，它在学习中国搞了“革新开放”之后，走上了正途，近30年成效斐然。特别是在这些年全球经济发展普遍疲软的背景下，越南经济可以说是“一股清流”。</p>
+                    <p>　　2014年越南经济增长率5.98%，2015年进一步提升至6.68%。虽然2016年增长率下滑至6.21%，但在世界经济低迷、全球贸易放缓以及其国内极端天气的影响下，这一成绩已难能可贵。而且越南人均GDP已超过2000美元，比我们跨越小康门槛的800美元高了不少。所以相比2000年中国的样子，越南现在即便差，应该也不会差太多。</p>
+                    <div class="img_wrapper"><img style="max-width: 500px;" src="http://n.sinaimg.cn/translate/20171115/U2i0-fynstfh8960782.jpg" alt="胡志明市的高楼与工地。"><span class="img_descr">胡志明市的高楼与工地。</span></div>
+
+                </div>
+                <h3 class="anchor">文章第三篇哦</h3>
+                <div class="scroll-ol">
+                    <p>　　越南经济能有这样的面貌，与其稳定的政治环境密切相关。越南只有一个政党，就是越南共产党。没有执政党更替问题，也没有发生革命。在这个基本面的有力保证之上，越南人基础教育不错，而且比较勤劳，管理相对容易，工资成本较低。因此，30多年能实现这样的增长也就顺理成章。</p>
+                    <p>　　但并不是说越南没有问题。越南虽然学习我们的发展路径，但两国从底子到里子都有很大不同。这就决定了，越南永远不会成为中国。</p>
+                    <p>　　举个例子，2014年4月，越南政府突然宣布，将放弃承办2019年原定在越南河内举行的第18届亚洲运动会。官方给出的解释是：越南在金融危机和全球经济下滑中受到了巨大的影响，国家经济水平仍处于困境。</p>
+                    <p>　　其实，在获得主办权之后，越南经济总体情况一直在改善，差钱之说显然并不完全成立。不少专业人士认为，这更多是越南自身的信心问题。</p>
+                    <p>　　越南领导人在宣布放弃时说，越南没有充分做好能够确保赛事顺利举行的准备。虽然成功举办国际赛事有助于提振经济和提升国家形象，但如果办得不成功，反而会损害越南的名誉。</p>
+                    <p>　　这个事不是孤例。越南最大的国营造船厂Vinashin，一度说要组一个世界第四的造船集团，没想到亏损40亿美元，受不了，慌了神。越南国企发展困难重重，屡次传出巨亏，至今没有什么好办法。</p>
+                    <p>　　这就是越南未来发展面临的内生问题，信心不足、没有大志、小富即安。普通人过好小日子就行了，搞什么亚运会奥运会，搞什么超级企业，反正都是瞎折腾白费钱。你能想象吗？直到2016年里约，越南才在射击项目上由老将黄春荣夺得历史上第一块奥运金牌。</p>
+                    <div class="img_wrapper"><img style="max-width: 500px;" src="http://n.sinaimg.cn/translate/20171115/BVrU-fynship2489988.jpg" alt=""><span class="img_descr"></span></div>
+                    <p>　　<strong>平衡</strong></p>
+                    <p>　　因为举办APEC的缘故，国际媒体上对其举办地越南也多有报道。除了对它快速发展的惊叹，最多提到的就是两个字——“平衡”。</p>
+                    <p>　　《纽约时报》说它“与中国积怨千年，越南试图在中美之间谋求平衡”，日经也说“越南兼顾中美的‘平衡外交’”。中美两个大国元首此次先后访问越南，似乎是这类评论的最新注脚。</p>
+                    <p>　　位置决定命运。越南地处中南半岛，且邻近中国，这使它深受美俄日印等大国的青睐，被视为对华战略的关键棋子。</p>
+                    <p>　　然而，越南和其他惯常使用平衡外交的国家不同，它一直就有着地区大国的情结。加之强烈的民族自尊心、良好的发展状况、逐渐强大的军事实力以及东盟这个后盾，国家自信更是爆棚。</p>
+                    <div class="img_wrapper"><img style="max-width: 500px;" src="http://n.sinaimg.cn/translate/20171115/mkFI-fynshev6248236.jpg" alt="水深可停泊航空母舰的金兰湾是越南的掌上明珠。"><span class="img_descr">水深可停泊航空母舰的金兰湾是越南的掌上明珠。</span></div>
+
+                </div>
+                <h3 class="anchor">文章第四篇哦</h3>
+                <div class="scroll-ol" style="padding-bottom:1px">
+
+                    <p>　　越南乐于游走于大国，尤其是中美之间，不甘当配角。河内思考的，是如何最大限度利用大国间矛盾，情况平缓时两头讨巧，遇到问题时则借力打力。</p>
+                    <p>　　美越关系这些年提升很快。2016年1月，越共十二大选出新一届领导集体后，总理阮春福5月即访美，4个月后，他才来到北京。</p>
+                    <p>　　然而，美越关系再怎么走近，也代替不了中越关系。1979年对越南的教训太大了，正因为1979年，越南才会在跟美国有重大关系进展前考虑我们的感受。</p>
+
+                </div>
+                <div class="correct-bot"></div>
+            </div>
+            <!-- 滚动条 -->
+            <div class="scroll-bar">
+                <!-- 滚动滑块儿 -->
+                <div class="scroll-slider"></div>
+            </div>
+        </div>
+        <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js" charset="utf-8"></script>
+        <script src="./CusScrollSlider.js" charset="utf-8"></script>
+        <script>
+            // 新建实例,传入参数
+            var CusScroll = new CusScrollSlider({
+                contSelector:".scroll-cont",
+                barSelector:".scroll-bar",
+                sliderSelector:".scroll-slider"
+            })
+        </script>
+</body>
+
+</html>
